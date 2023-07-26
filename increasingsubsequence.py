@@ -46,11 +46,11 @@ class Solution:
             #TODO: Write code below to return an int with the solution to the prompt.
             if len(arr) == 0:
                 return 0
-            max = 0
+            max = 1
             for i in range(len(arr)-1):
                 count = 1
                 for j in range(i, len(arr)-1):
-                    if arr[j+1]>arr[j]:
+                    if arr[j+1]>=arr[j]:
                         count+= 1
                     else:
                         break
