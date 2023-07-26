@@ -44,6 +44,7 @@ class Solution:
             #return type: int
 
             #TODO: Write code below to return an int with the solution to the prompt.
+            print(arr)
             if len(arr) == 0:
                 return 0
             max = 1
