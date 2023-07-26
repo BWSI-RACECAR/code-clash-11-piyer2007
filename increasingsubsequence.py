@@ -47,7 +47,7 @@ class Solution:
             if len(arr) == 0:
                 return 0
             max = 1
-            for i in range(len(arr)-1):
+            for i in range(len(arr)):
                 count = 1
                 prev = arr[i]
                 for j in range(i, len(arr)-1):
