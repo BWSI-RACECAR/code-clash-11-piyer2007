@@ -51,7 +51,7 @@ class Solution:
                 count = 1
                 prev = arr[i]
                 for j in range(i, len(arr)-1):
-                    if arr[j+1]>=prev:
+                    if arr[j+1]>prev:
                         count+= 1
                         prev = arr[j+1]
                 if count > max:
