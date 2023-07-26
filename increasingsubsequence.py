@@ -55,6 +55,8 @@ class Solution:
                     if arr[j+1]>prev:
                         count+= 1
                         prev = arr[j+1]
+                if prev == arr[(len(arr)-1)]:
+                    count+=1
                 if count > max:
                     max = count
             return max
