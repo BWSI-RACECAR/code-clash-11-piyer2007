@@ -49,11 +49,11 @@ class Solution:
             max = 1
             for i in range(len(arr)-1):
                 count = 1
+                prev = arr[i]
                 for j in range(i, len(arr)-1):
-                    if arr[j+1]>=arr[j]:
+                    if arr[j+1]>=prev:
                         count+= 1
-                    else:
-                        break
+                        prev = arr[j+1]
                 if count > max:
                     max = count
             return max
