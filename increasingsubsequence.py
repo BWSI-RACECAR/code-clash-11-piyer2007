@@ -47,6 +47,8 @@ class Solution:
                 for j in range(i, len(arr)-1):
                     if arr[j+1]>arr[j]:
                         count+= 1
+                    else:
+                        break
                 if count > max:
                     max = count
             return max
