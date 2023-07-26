@@ -51,7 +51,7 @@ class Solution:
                         break
                 if count > max:
                     max = count
-            return max
+            return max+1
 
 def main():
     array = input().split(" ")
