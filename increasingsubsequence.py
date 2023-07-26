@@ -44,22 +44,40 @@ class Solution:
             #return type: int
 
             #TODO: Write code below to return an int with the solution to the prompt.
-            print(arr)
-            if len(arr) == 0:
-                return 0
-            max = 1
-            for i in range(len(arr)):
-                count = 1
-                prev = arr[i]
-                for j in range(i, len(arr)-1):
-                    if arr[j+1]>prev:
-                        count+= 1
-                        prev = arr[j+1]
-                if prev == arr[(len(arr)-1)]:
-                    count+=1
-                if count > max:
-                    max = count
-            return max
+            # print(arr)
+            # if len(arr) == 0:
+            #     return 0
+            # if len(arr) == 1:
+            #     return 1
+            # max = 1
+            # for i in range(len(arr)):
+            #     count = 1
+            #     prev = arr[i]
+            #     for j in range(i, len(arr)-1):
+            #         if arr[j+1]>prev:
+            #             count+= 1
+            #             prev = arr[j+1]
+            #     if prev == arr[(len(arr)-1)]:
+            #         count+=1
+            #     if count > max:
+            #         max = count
+            # return max
+            if(len(arr)!=0):
+                count=1
+                newcount=0
+                for i in range(1,len(arr)):
+                    if(arr[i]>arr[i-1]):
+                        count+=1
+                    else:
+                        count=1
+                        newcount+=1
+                print(arr)
+                print(count)
+            else:
+                count=0
+
+            return count+newcount
+
 
 def main():
     array = input().split(" ")
