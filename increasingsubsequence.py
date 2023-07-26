@@ -27,6 +27,9 @@ subsequence.
 
 
 Test Cases:
+[1] = 1
+[] = 0
+[3 2] = 1
 Input: [9, 7, 5, 3, 1] Output: 1
 
 Input: [1, 3, 5, 7, 9] Output: 5
@@ -41,9 +44,11 @@ class Solution:
             #return type: int
 
             #TODO: Write code below to return an int with the solution to the prompt.
+            if len(arr) == 0:
+                return 0
             max = 0
             for i in range(len(arr)-1):
-                count = 0
+                count = 1
                 for j in range(i, len(arr)-1):
                     if arr[j+1]>arr[j]:
                         count+= 1
@@ -51,7 +56,7 @@ class Solution:
                         break
                 if count > max:
                     max = count
-            return max+1
+            return max
 
 def main():
     array = input().split(" ")
